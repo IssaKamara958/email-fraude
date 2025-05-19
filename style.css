@@ -1,0 +1,209 @@
+  :root {
+      --primary-color: #00695c;
+      --secondary-color: #004d40;
+      --accent-color: #ff6f00;
+      --light-color: #f9f9f9;
+      --dark-color: #333;
+      --warning-color: #d32f2f;
+      --success-color: #388e3c;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: var(--light-color);
+      color: var(--dark-color);
+    }
+    
+    header, footer {
+      background: var(--secondary-color);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    
+    header {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--accent-color);
+    }
+    
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    h1, h2, h3 {
+      color: var(--primary-color);
+      font-family: 'Roboto', sans-serif;
+      margin-bottom: 1rem;
+    }
+    
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+    }
+    
+    h3 {
+      font-size: 1.4rem;
+      color: var(--secondary-color);
+      margin-top: 1.5rem;
+    }
+    
+    section {
+      margin-bottom: 3rem;
+    }
+    
+    .lang {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #666;
+      display: block;
+      margin-top: 0.3rem;
+    }
+    
+    ul {
+      padding-left: 1.5rem;
+      margin: 1rem 0;
+    }
+    
+    li {
+      margin-bottom: 0.8rem;
+      position: relative;
+    }
+    
+    li::before {
+      content: "•";
+      color: var(--accent-color);
+      font-weight: bold;
+      display: inline-block; 
+      width: 1em;
+      margin-left: -1em;
+    }
+    
+    .img-container {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    
+    .img-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .img-container img:hover {
+      transform: scale(1.02);
+    }
+    
+    .warning-box {
+      background-color: #fff3e0;
+      border-left: 4px solid var(--accent-color);
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+    
+    .share-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    
+    .share-btn {
+      padding: 0.5rem 1rem;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.3s;
+    }
+    
+    .share-btn:hover {
+      background: var(--secondary-color);
+    }
+    
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    footer a:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      main {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+    
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    section {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+    
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+    section:nth-child(5) { animation-delay: 0.4s; }
